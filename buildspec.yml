@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build --platform linux/amd64 -t $REPOSITORY_URI:$PROJECT_NAME .
-      - docker tag $REPOSITORY_URI:PROJECT_NAME $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag $REPOSITORY_URI:$PROJECT_NAME $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on `date`
